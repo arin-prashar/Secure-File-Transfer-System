@@ -9,6 +9,7 @@ Shared_Files/
 
 # Distribution / packaging
 .Python
+.idx/
 build/
 develop-eggs/
 dist/
