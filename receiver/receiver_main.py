@@ -13,9 +13,11 @@ from pymongo.server_api import ServerApi
 # import receiver.fileInfo as fi
 
 
-def receive_fille():
-    # soc=socket.socket(socket.AF_INET,socket.SOCK_STREAM)
-    # soc.connect((os.getenv("host"), os.getenv("port")))
+def receive_file():
+    soc=socket.socket(socket.AF_INET,socket.SOCK_STREAM)
+    soc.connect(("localhost",3000))
+    soc.send("Hello, server!".encode())
+    print(soc)
     pass
 
 
@@ -26,7 +28,7 @@ def receive_fille():
 def main():
     print(os.getenv("port"),os.getenv("host"))
 
-    # client=MongoClient(os.getenv("uri",server_api=ServerApi('1')))
-    receive_fille()
+    # client=MongoClient(os.getenv("URI",server_api=ServerApi('1')))
+    receive_file()
 
 main()

@@ -36,6 +36,3 @@ def encrypt_file(user:str, file_to_encrypt:str)->None:
         return {encrypted_file, tag}
     except Exception as e:
         print(e," \n2")
-
-
-client.close()
